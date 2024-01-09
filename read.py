@@ -22,9 +22,6 @@ for d in data:
 		new.append(d)
 print('共有', len(new), '留言長度小於100')
 
-good = []
-for d in data:
-	if 'good' in d:
-		good.append(d)
-print('共有', len(good), '個流言有出現good')
+good = [d for d in data if 'good' in d]
+print('共有', len(good), '個留言有出現good')
 
